@@ -1,5 +1,6 @@
 import { Github, Plus } from "lucide-react";
 
+import { PaletteSwitcher } from "@/components/PaletteSwitcher";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -26,7 +27,8 @@ export function Header() {
 					</h1>
 				</div>
 			</div>
-			        <div className="flex items-center gap-[var(--spacing-2)]">
+			        <div className="flex flex-wrap items-center gap-[var(--spacing-2)] justify-end">
+			        <PaletteSwitcher />
 			        <Button variant="ghost" size="icon" asChild aria-label="View source on GitHub" className="text-muted-foreground hover:text-foreground">
 			          <a
 			            href="https://github.com/gosuda/portal"

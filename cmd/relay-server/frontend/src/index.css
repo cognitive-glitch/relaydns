@@ -6,49 +6,137 @@
 		"Public Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
 		sans-serif;
 
-	  --color-nm-canvas: 240 5% 10%;  /* Softer dark background */
+	  --palette-default-dark-canvas: 240 5% 10%;  /* Softer dark background */
 
-	  --color-nm-surface: 240 4% 16%;   /* Slightly lighter card background */
+	  --palette-default-dark-surface: 240 4% 16%;   /* Slightly lighter card background */
 
-	  --color-nm-overlay: 240 4% 20%;
+	  --palette-default-dark-overlay: 240 4% 20%;
 
-	  --color-nm-highlight: 240 5% 25%;
+	  --palette-default-dark-highlight: 240 5% 25%;
 
-	  --color-nm-ink: 240 5% 90%;       /* Softer white for text (not pure white) */
+	  --palette-default-dark-ink: 240 5% 90%;       /* Softer white for text (not pure white) */
 
-	  --color-nm-muted: 240 5% 65%;
+	  --palette-default-dark-muted: 240 5% 65%;
 
-	  --color-nm-primary: 199 89% 48%;  /* Keep the brand blue but maybe slightly adjusted if needed, currently keeping strict */
+	  --palette-default-dark-primary: 199 89% 48%;  /* Keep the brand blue but maybe slightly adjusted if needed, currently keeping strict */
 
-	  --color-nm-secondary: 240 4% 22%;
+	  --palette-default-dark-secondary: 240 4% 22%;
 
-	  --color-nm-card-border: 240 4% 26%; /* Visible border for separation */
+	  --palette-default-dark-border: 240 4% 26%; /* Visible border for separation */
 
-	  --color-nm-accent: 240 5% 80%;
+	  --palette-default-dark-accent: 240 5% 80%;
 
-	  --color-status-online: 150 60% 45%; /* Softer green */
+	  --palette-default-dark-accent-foreground: 240 5% 80%;
 
-	  --color-status-offline: 0 60% 55%;  /* Softer red */
+	  --palette-default-status-online: 150 60% 45%; /* Softer green */
 
-	  --color-status-warning: 35 90% 50%;
+	  --palette-default-status-offline: 0 60% 55%;  /* Softer red */
+
+	  --palette-default-status-warning: 35 90% 50%;
 
 	
 
-	  --color-light-canvas: 240 5% 98%;
+	  --palette-default-light-canvas: 240 5% 98%;
 
-	  --color-light-surface: 0 0% 100%;
+	  --palette-default-light-surface: 0 0% 100%;
 
-	  --color-light-overlay: 240 5% 96%;
+	  --palette-default-light-overlay: 240 5% 96%;
 
-	  --color-light-highlight: 240 6% 94%;
+	  --palette-default-light-highlight: 240 6% 94%;
 
-	  --color-light-ink: 240 5% 15%;
+	  --palette-default-light-ink: 240 5% 15%;
 
-	  --color-light-muted: 240 4% 50%;
+	  --palette-default-light-muted: 240 4% 50%;
 
-	  --color-light-border: 240 6% 90%;
+	  --palette-default-light-border: 240 6% 90%;
 
-	  --color-light-accent: 240 5% 85%;
+	  --palette-default-light-accent: 240 5% 85%;
+
+	  --palette-default-light-accent-foreground: 240 5% 25%;
+
+	  /* Warm neo-neutral palette */
+
+	  --palette-warm-dark-canvas: 24 15% 12%;
+
+	  --palette-warm-dark-surface: 24 14% 18%;
+
+	  --palette-warm-dark-overlay: 24 12% 22%;
+
+	  --palette-warm-dark-highlight: 27 20% 30%;
+
+	  --palette-warm-dark-ink: 28 32% 90%;
+
+	  --palette-warm-dark-muted: 28 20% 65%;
+
+	  --palette-warm-dark-primary: 18 70% 52%;
+
+	  --palette-warm-dark-secondary: 28 12% 28%;
+
+	  --palette-warm-dark-border: 24 12% 28%;
+
+	  --palette-warm-dark-accent: 27 25% 32%;
+
+	  --palette-warm-dark-accent-foreground: 34 45% 92%;
+
+	  --palette-warm-light-canvas: 26 40% 97%;
+
+	  --palette-warm-light-surface: 0 0% 100%;
+
+	  --palette-warm-light-overlay: 27 30% 93%;
+
+	  --palette-warm-light-highlight: 28 30% 90%;
+
+	  --palette-warm-light-ink: 26 35% 18%;
+
+	  --palette-warm-light-muted: 28 22% 48%;
+
+	  --palette-warm-light-border: 28 25% 80%;
+
+	  --palette-warm-light-accent: 28 55% 88%;
+
+	  --palette-warm-light-accent-foreground: 26 35% 20%;
+
+	  /* Cool tech palette */
+
+	  --palette-cool-dark-canvas: 218 20% 12%;
+
+	  --palette-cool-dark-surface: 218 16% 18%;
+
+	  --palette-cool-dark-overlay: 218 14% 22%;
+
+	  --palette-cool-dark-highlight: 210 20% 30%;
+
+	  --palette-cool-dark-ink: 210 20% 90%;
+
+	  --palette-cool-dark-muted: 210 12% 65%;
+
+	  --palette-cool-dark-primary: 192 70% 55%;
+
+	  --palette-cool-dark-secondary: 220 12% 26%;
+
+	  --palette-cool-dark-border: 218 12% 28%;
+
+	  --palette-cool-dark-accent: 210 24% 32%;
+
+	  --palette-cool-dark-accent-foreground: 210 25% 90%;
+
+	  --palette-cool-light-canvas: 210 25% 97%;
+
+	  --palette-cool-light-surface: 0 0% 100%;
+
+	  --palette-cool-light-overlay: 210 20% 95%;
+
+	  --palette-cool-light-highlight: 210 20% 92%;
+
+	  --palette-cool-light-ink: 210 20% 15%;
+
+	  --palette-cool-light-muted: 210 12% 50%;
+
+	  --palette-cool-light-border: 210 18% 84%;
+
+	  --palette-cool-light-accent: 208 55% 88%;
+
+	  --palette-cool-light-accent-foreground: 210 20% 18%;
 
 	
 
@@ -155,54 +243,162 @@
 	}
 
 @layer base {
-	:root {
+	:root,
+	:root[data-palette="default"] {
 		color-scheme: dark;
-		--background: var(--color-nm-canvas);
-		--foreground: var(--color-nm-ink);
-		--muted: var(--color-nm-overlay);
-		--muted-foreground: var(--color-nm-muted);
-		--card: var(--color-nm-surface);
-		--card-foreground: var(--color-nm-ink);
-		--popover: var(--color-nm-overlay);
-		--popover-foreground: var(--color-nm-ink);
-		--border: var(--color-nm-card-border);
-		--input: var(--color-nm-card-border);
-		--ring: var(--color-nm-primary);
-		--primary: var(--color-nm-primary);
-		--primary-foreground: var(--color-nm-canvas);
-		--secondary: var(--color-nm-secondary);
-		--secondary-foreground: var(--color-nm-ink);
-		--accent: var(--color-nm-highlight);
-		--accent-foreground: var(--color-nm-accent);
-		--destructive: var(--color-status-offline);
-		--destructive-foreground: var(--color-nm-ink);
-		--status-online: var(--color-status-online);
-		--status-offline: var(--color-status-offline);
+		--background: var(--palette-default-dark-canvas);
+		--foreground: var(--palette-default-dark-ink);
+		--muted: var(--palette-default-dark-overlay);
+		--muted-foreground: var(--palette-default-dark-muted);
+		--card: var(--palette-default-dark-surface);
+		--card-foreground: var(--palette-default-dark-ink);
+		--popover: var(--palette-default-dark-overlay);
+		--popover-foreground: var(--palette-default-dark-ink);
+		--border: var(--palette-default-dark-border);
+		--input: var(--palette-default-dark-border);
+		--ring: var(--palette-default-dark-primary);
+		--primary: var(--palette-default-dark-primary);
+		--primary-foreground: var(--palette-default-dark-canvas);
+		--secondary: var(--palette-default-dark-secondary);
+		--secondary-foreground: var(--palette-default-dark-ink);
+		--accent: var(--palette-default-dark-highlight);
+		--accent-foreground: var(--palette-default-dark-accent-foreground);
+		--destructive: var(--palette-default-status-offline);
+		--destructive-foreground: var(--palette-default-dark-ink);
+		--status-online: var(--palette-default-status-online);
+		--status-offline: var(--palette-default-status-offline);
+		--status-warning: var(--palette-default-status-warning);
 	}
 
-	[data-theme="light"] {
+	[data-theme="light"],
+	[data-theme="light"][data-palette="default"] {
 		color-scheme: light;
-		--background: var(--color-light-canvas);
-		--foreground: var(--color-light-ink);
-		--muted: var(--color-light-overlay);
-		--muted-foreground: var(--color-light-muted);
-		--card: var(--color-light-surface);
-		--card-foreground: var(--color-light-ink);
-		--popover: var(--color-light-overlay);
-		--popover-foreground: var(--color-light-ink);
-		--border: var(--color-light-border);
-		--input: var(--color-light-border);
-		--ring: var(--color-nm-primary);
-		--primary: var(--color-nm-primary);
-		--primary-foreground: var(--color-light-ink);
-		--secondary: var(--color-light-overlay);
-		--secondary-foreground: var(--color-light-ink);
-		--accent: var(--color-light-highlight);
-		--accent-foreground: var(--color-light-accent);
-		--destructive: var(--color-status-offline);
-		--destructive-foreground: var(--color-light-ink);
-		--status-online: var(--color-status-online);
-		--status-offline: var(--color-status-offline);
+		--background: var(--palette-default-light-canvas);
+		--foreground: var(--palette-default-light-ink);
+		--muted: var(--palette-default-light-overlay);
+		--muted-foreground: var(--palette-default-light-muted);
+		--card: var(--palette-default-light-surface);
+		--card-foreground: var(--palette-default-light-ink);
+		--popover: var(--palette-default-light-overlay);
+		--popover-foreground: var(--palette-default-light-ink);
+		--border: var(--palette-default-light-border);
+		--input: var(--palette-default-light-border);
+		--ring: var(--palette-default-dark-primary);
+		--primary: var(--palette-default-dark-primary);
+		--primary-foreground: var(--palette-default-light-ink);
+		--secondary: var(--palette-default-light-overlay);
+		--secondary-foreground: var(--palette-default-light-ink);
+		--accent: var(--palette-default-light-highlight);
+		--accent-foreground: var(--palette-default-light-accent-foreground);
+		--destructive: var(--palette-default-status-offline);
+		--destructive-foreground: var(--palette-default-light-ink);
+		--status-online: var(--palette-default-status-online);
+		--status-offline: var(--palette-default-status-offline);
+		--status-warning: var(--palette-default-status-warning);
+	}
+
+	[data-palette="warm"] {
+		color-scheme: dark;
+		--background: var(--palette-warm-dark-canvas);
+		--foreground: var(--palette-warm-dark-ink);
+		--muted: var(--palette-warm-dark-overlay);
+		--muted-foreground: var(--palette-warm-dark-muted);
+		--card: var(--palette-warm-dark-surface);
+		--card-foreground: var(--palette-warm-dark-ink);
+		--popover: var(--palette-warm-dark-overlay);
+		--popover-foreground: var(--palette-warm-dark-ink);
+		--border: var(--palette-warm-dark-border);
+		--input: var(--palette-warm-dark-border);
+		--ring: var(--palette-warm-dark-primary);
+		--primary: var(--palette-warm-dark-primary);
+		--primary-foreground: var(--palette-warm-dark-canvas);
+		--secondary: var(--palette-warm-dark-secondary);
+		--secondary-foreground: var(--palette-warm-dark-ink);
+		--accent: var(--palette-warm-dark-highlight);
+		--accent-foreground: var(--palette-warm-dark-accent-foreground);
+		--destructive: var(--palette-default-status-offline);
+		--destructive-foreground: var(--palette-warm-dark-ink);
+		--status-online: var(--palette-default-status-online);
+		--status-offline: var(--palette-default-status-offline);
+		--status-warning: var(--palette-default-status-warning);
+	}
+
+	[data-theme="light"][data-palette="warm"] {
+		color-scheme: light;
+		--background: var(--palette-warm-light-canvas);
+		--foreground: var(--palette-warm-light-ink);
+		--muted: var(--palette-warm-light-overlay);
+		--muted-foreground: var(--palette-warm-light-muted);
+		--card: var(--palette-warm-light-surface);
+		--card-foreground: var(--palette-warm-light-ink);
+		--popover: var(--palette-warm-light-overlay);
+		--popover-foreground: var(--palette-warm-light-ink);
+		--border: var(--palette-warm-light-border);
+		--input: var(--palette-warm-light-border);
+		--ring: var(--palette-warm-dark-primary);
+		--primary: var(--palette-warm-dark-primary);
+		--primary-foreground: var(--palette-warm-light-ink);
+		--secondary: var(--palette-warm-light-overlay);
+		--secondary-foreground: var(--palette-warm-light-ink);
+		--accent: var(--palette-warm-light-highlight);
+		--accent-foreground: var(--palette-warm-light-accent-foreground);
+		--destructive: var(--palette-default-status-offline);
+		--destructive-foreground: var(--palette-warm-light-ink);
+		--status-online: var(--palette-default-status-online);
+		--status-offline: var(--palette-default-status-offline);
+		--status-warning: var(--palette-default-status-warning);
+	}
+
+	[data-palette="cool"] {
+		color-scheme: dark;
+		--background: var(--palette-cool-dark-canvas);
+		--foreground: var(--palette-cool-dark-ink);
+		--muted: var(--palette-cool-dark-overlay);
+		--muted-foreground: var(--palette-cool-dark-muted);
+		--card: var(--palette-cool-dark-surface);
+		--card-foreground: var(--palette-cool-dark-ink);
+		--popover: var(--palette-cool-dark-overlay);
+		--popover-foreground: var(--palette-cool-dark-ink);
+		--border: var(--palette-cool-dark-border);
+		--input: var(--palette-cool-dark-border);
+		--ring: var(--palette-cool-dark-primary);
+		--primary: var(--palette-cool-dark-primary);
+		--primary-foreground: var(--palette-cool-dark-canvas);
+		--secondary: var(--palette-cool-dark-secondary);
+		--secondary-foreground: var(--palette-cool-dark-ink);
+		--accent: var(--palette-cool-dark-highlight);
+		--accent-foreground: var(--palette-cool-dark-accent-foreground);
+		--destructive: var(--palette-default-status-offline);
+		--destructive-foreground: var(--palette-cool-dark-ink);
+		--status-online: var(--palette-default-status-online);
+		--status-offline: var(--palette-default-status-offline);
+		--status-warning: var(--palette-default-status-warning);
+	}
+
+	[data-theme="light"][data-palette="cool"] {
+		color-scheme: light;
+		--background: var(--palette-cool-light-canvas);
+		--foreground: var(--palette-cool-light-ink);
+		--muted: var(--palette-cool-light-overlay);
+		--muted-foreground: var(--palette-cool-light-muted);
+		--card: var(--palette-cool-light-surface);
+		--card-foreground: var(--palette-cool-light-ink);
+		--popover: var(--palette-cool-light-overlay);
+		--popover-foreground: var(--palette-cool-light-ink);
+		--border: var(--palette-cool-light-border);
+		--input: var(--palette-cool-light-border);
+		--ring: var(--palette-cool-dark-primary);
+		--primary: var(--palette-cool-dark-primary);
+		--primary-foreground: var(--palette-cool-light-ink);
+		--secondary: var(--palette-cool-light-overlay);
+		--secondary-foreground: var(--palette-cool-light-ink);
+		--accent: var(--palette-cool-light-highlight);
+		--accent-foreground: var(--palette-cool-light-accent-foreground);
+		--destructive: var(--palette-default-status-offline);
+		--destructive-foreground: var(--palette-cool-light-ink);
+		--status-online: var(--palette-default-status-online);
+		--status-offline: var(--palette-default-status-offline);
+		--status-warning: var(--palette-default-status-warning);
 	}
 
 	  * {
