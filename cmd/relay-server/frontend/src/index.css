@@ -6,82 +6,153 @@
 		"Public Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
 		sans-serif;
 
-	--color-nm-canvas: 200 7% 8.8%;
-	--color-nm-surface: 195 7% 11%;
-	--color-nm-overlay: 200 7% 13%;
-	--color-nm-highlight: 255 30% 16%;
-	--color-nm-ink: 210 20% 98%;
-	--color-nm-muted: 206 6% 63%;
-	--color-nm-primary: 206 100% 50%;
-	--color-nm-secondary: 200 7% 15%;
-	--color-nm-card-border: 206 6% 21%;
-	--color-nm-accent: 255 95% 76%;
-	--color-status-online: 142 76% 36%;
-	--color-status-offline: 0 72% 51%;
-	--color-status-warning: 38 92% 50%;
+	  --color-nm-canvas: 240 5% 10%;  /* Softer dark background */
 
-	--color-light-canvas: 0 0% 99%;
-	--color-light-surface: 240 10% 98%;
-	--color-light-overlay: 220 13% 97%;
-	--color-light-highlight: 255 92% 97%;
-	--color-light-ink: 200 7% 8.8%;
-	--color-light-muted: 206 6% 44%;
-	--color-light-border: 220 13% 91%;
-	--color-light-accent: 255 54% 50%;
+	  --color-nm-surface: 240 4% 16%;   /* Slightly lighter card background */
 
-	--spacing-base: 4px;
-	--spacing-1: calc(var(--spacing-base) * 1); /* 4px */
-	--spacing-2: calc(var(--spacing-base) * 2); /* 8px */
-	--spacing-3: calc(var(--spacing-base) * 3); /* 12px */
-	--spacing-4: calc(var(--spacing-base) * 4); /* 16px */
-	--spacing-5: calc(var(--spacing-base) * 6); /* 24px */
-	--spacing-6: calc(var(--spacing-base) * 8); /* 32px */
-	--spacing-7: calc(var(--spacing-base) * 10); /* 40px */
-	--spacing-8: calc(var(--spacing-base) * 12); /* 48px */
+	  --color-nm-overlay: 240 4% 20%;
 
-	--radius: 0.75rem;
-	--radius-lg: 1rem;
-	--radius-xl: 1.5rem;
-	--radius-2xl: 1.75rem;
+	  --color-nm-highlight: 240 5% 25%;
 
-	--font-size-2xs: 0.7rem;
-	--font-size-xs: 0.75rem;
-	--font-size-sm: 0.875rem;
-	--font-size-base: 1rem;
-	--font-size-lg: 1.125rem;
-	--line-height-tight: 1.2;
-	--line-height-base: 1.4;
+	  --color-nm-ink: 240 5% 90%;       /* Softer white for text (not pure white) */
 
-	--control-height-sm: calc(var(--spacing-4) * 2.25);
-	--control-height-md: calc(var(--spacing-4) * 2.5);
-	--control-height-lg: calc(var(--spacing-4) * 3);
+	  --color-nm-muted: 240 5% 65%;
 
-	--shadow-raised:
-		8px 8px 16px rgb(0 0 0 / 0.4), -4px -4px 12px rgb(255 255 255 / 0.02);
-	--shadow-pressed:
-		inset 8px 8px 16px rgb(0 0 0 / 0.45), inset -4px -4px 12px
-		rgb(255 255 255 / 0.02);
+	  --color-nm-primary: 199 89% 48%;  /* Keep the brand blue but maybe slightly adjusted if needed, currently keeping strict */
 
-	--color-background: hsl(var(--background));
-	--color-foreground: hsl(var(--foreground));
-	--color-card: hsl(var(--card));
-	--color-card-foreground: hsl(var(--card-foreground));
-	--color-popover: hsl(var(--popover));
-	--color-popover-foreground: hsl(var(--popover-foreground));
-	--color-primary: hsl(var(--primary));
-	--color-primary-foreground: hsl(var(--primary-foreground));
-	--color-secondary: hsl(var(--secondary));
-	--color-secondary-foreground: hsl(var(--secondary-foreground));
-	--color-muted: hsl(var(--muted));
-	--color-muted-foreground: hsl(var(--muted-foreground));
-	--color-accent: hsl(var(--accent));
-	--color-accent-foreground: hsl(var(--accent-foreground));
-	--color-destructive: hsl(var(--destructive));
-	--color-destructive-foreground: hsl(var(--destructive-foreground));
-	--color-border: hsl(var(--border));
-	--color-input: hsl(var(--input));
-	--color-ring: hsl(var(--ring));
-}
+	  --color-nm-secondary: 240 4% 22%;
+
+	  --color-nm-card-border: 240 4% 26%; /* Visible border for separation */
+
+	  --color-nm-accent: 240 5% 80%;
+
+	  --color-status-online: 150 60% 45%; /* Softer green */
+
+	  --color-status-offline: 0 60% 55%;  /* Softer red */
+
+	  --color-status-warning: 35 90% 50%;
+
+	
+
+	  --color-light-canvas: 240 5% 98%;
+
+	  --color-light-surface: 0 0% 100%;
+
+	  --color-light-overlay: 240 5% 96%;
+
+	  --color-light-highlight: 240 6% 94%;
+
+	  --color-light-ink: 240 5% 15%;
+
+	  --color-light-muted: 240 4% 50%;
+
+	  --color-light-border: 240 6% 90%;
+
+	  --color-light-accent: 240 5% 85%;
+
+	
+
+	  --spacing-base: 4px;
+
+	  --spacing-1: calc(var(--spacing-base) * 1); /* 4px */
+
+	  --spacing-2: calc(var(--spacing-base) * 2); /* 8px */
+
+	  --spacing-3: calc(var(--spacing-base) * 3); /* 12px */
+
+	  --spacing-4: calc(var(--spacing-base) * 4); /* 16px */
+
+	  --spacing-5: calc(var(--spacing-base) * 6); /* 24px */
+
+	  --spacing-6: calc(var(--spacing-base) * 8); /* 32px */
+
+	  --spacing-7: calc(var(--spacing-base) * 10); /* 40px */
+
+	  --spacing-8: calc(var(--spacing-base) * 12); /* 48px */
+
+	
+
+	  --radius: 0.75rem;
+
+	  --radius-lg: 1rem;
+
+	  --radius-xl: 1.5rem;
+
+	  --radius-2xl: 1.75rem;
+
+	
+
+	  --font-size-2xs: 0.7rem;
+
+	  --font-size-xs: 0.75rem;
+
+	  --font-size-sm: 0.875rem;
+
+	  --font-size-base: 1rem;
+
+	  --font-size-lg: 1.125rem;
+
+	  --line-height-tight: 1.2;
+
+	  --line-height-base: 1.4;
+
+	
+
+	  --control-height-sm: calc(var(--spacing-4) * 2.25);
+
+	  --control-height-md: calc(var(--spacing-4) * 2.5);
+
+	  --control-height-lg: calc(var(--spacing-4) * 3);
+
+	
+
+	  /* Modern, subtle shadows instead of heavy neumorphic ones */
+
+	  --shadow-raised: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+	  --shadow-pressed: inset 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+	
+
+	  --color-background: hsl(var(--background));
+
+	  --color-foreground: hsl(var(--foreground));
+
+	  --color-card: hsl(var(--card));
+
+	  --color-card-foreground: hsl(var(--card-foreground));
+
+	  --color-popover: hsl(var(--popover));
+
+	  --color-popover-foreground: hsl(var(--popover-foreground));
+
+	  --color-primary: hsl(var(--primary));
+
+	  --color-primary-foreground: hsl(var(--primary-foreground));
+
+	  --color-secondary: hsl(var(--secondary));
+
+	  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+	  --color-muted: hsl(var(--muted));
+
+	  --color-muted-foreground: hsl(var(--muted-foreground));
+
+	  --color-accent: hsl(var(--accent));
+
+	  --color-accent-foreground: hsl(var(--accent-foreground));
+
+	  --color-destructive: hsl(var(--destructive));
+
+	  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+	  --color-border: hsl(var(--border));
+
+	  --color-input: hsl(var(--input));
+
+	  --color-ring: hsl(var(--ring));
+
+	}
 
 @layer base {
 	:root {
@@ -134,38 +205,39 @@
 		--status-offline: var(--color-status-offline);
 	}
 
-	* {
-		border-color: hsl(var(--border));
-	}
-
-	body {
-		min-height: 100vh;
-		background-color: hsl(var(--background));
-		color: hsl(var(--foreground));
-		font-family: var(--font-sans);
-		font-feature-settings:
-			"liga" on,
-			"calt" on;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	::selection {
-		background-color: hsl(var(--primary) / 0.35);
-		color: hsl(var(--primary-foreground));
-	}
-
-	.neumorphic-surface {
-		box-shadow: var(--shadow-raised);
-	}
-
-	.neumorphic-pressed {
-		box-shadow: var(--shadow-pressed);
-	}
-
-	.toolbar-surface {
-		background-color: hsl(var(--card));
-		box-shadow: var(--shadow-raised);
-	}
+	  * {
+	    border-color: hsl(var(--border));
+	    outline-color: hsl(var(--ring));
+	  }
+	  body {
+	    min-height: 100vh;
+	    background-color: hsl(var(--background));
+	    color: hsl(var(--foreground));
+	    font-family: var(--font-sans);
+	    font-feature-settings: "liga" on, "calt" on;
+	    -webkit-font-smoothing: antialiased;
+	  }
+	
+	  ::selection {
+	    background-color: hsl(var(--primary) / 0.2);
+	    color: hsl(var(--primary-foreground));
+	  }
+	
+	  .neumorphic-surface {
+	    box-shadow: var(--shadow-raised);
+	    border: 1px solid hsl(var(--border) / 0.5);
+	  }
+	
+	  .neumorphic-pressed {
+	    box-shadow: var(--shadow-pressed);
+	    background-color: hsl(var(--muted) / 0.1);
+	  }
+	
+	  .toolbar-surface {
+	    background-color: hsl(var(--card));
+	    box-shadow: var(--shadow-raised);
+	    border: 1px solid hsl(var(--border) / 0.5);
+	  }
 
 	.stack-sm {
 		gap: var(--spacing-2);

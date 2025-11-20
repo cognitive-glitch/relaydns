@@ -49,24 +49,23 @@ export function ServerCard({
 	};
 
 	return (
-		<Card
-			role="link"
-			tabIndex={0}
-			aria-label={`Open ${name}`}
-			onClick={handleNavigate}
-			onKeyDown={handleKeyDown}
-			className="group flex h-full cursor-pointer flex-col gap-[var(--spacing-3)] border border-border/50 bg-card/90 p-[var(--spacing-4)] transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-		>
-			<div className="relative h-32 w-full overflow-hidden rounded-[var(--radius-lg)] border border-border/40">
-				<img
-					src={thumbnail || defaultThumbnail}
-					alt={`Preview for ${name}`}
-					className="h-full w-full object-cover"
-					loading="lazy"
-				/>
-				<div className="absolute inset-0 bg-black/40" aria-hidden="true" />
-			</div>
-			<div className="flex flex-col gap-[var(--spacing-3)]">
+		    <Card
+		      role="link"
+		      tabIndex={0}
+		      aria-label={`Open ${name}`}
+		      onClick={handleNavigate}
+		      onKeyDown={handleKeyDown}
+		      className="group flex h-full cursor-pointer flex-col gap-[var(--spacing-3)] border border-border/60 bg-card hover:bg-accent/5 p-[var(--spacing-4)] transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+		    >
+		      <div className="relative h-32 w-full overflow-hidden rounded-[var(--radius-lg)] border border-border/40 bg-muted/20">
+		        <img
+		          src={thumbnail || defaultThumbnail}
+		          alt={`Preview for ${name}`}
+		          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+		          loading="lazy"
+		        />
+		        <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
+		      </div>			<div className="flex flex-col gap-[var(--spacing-3)]">
 				<div className="flex items-center gap-[var(--spacing-2)]">
 					<Badge variant={online ? "success" : "destructive"}>
 						{online ? "Online" : "Offline"}

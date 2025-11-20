@@ -62,37 +62,61 @@ export function SearchBar({
 		setCommandOpen(false);
 	};
 
-	return (
-		<>
-			<Card className="toolbar-surface border-none px-[var(--spacing-4)] py-[var(--spacing-4)]">
-				<div className="flex flex-col gap-[var(--spacing-3)]">
-					<label
-						htmlFor={searchInputId}
-						className="text-label flex items-center gap-[var(--spacing-2)] text-muted-foreground"
-					>
-						<span className="hidden sm:inline">Search</span>
-						<span className="sr-only">Search servers</span>
-					</label>
-					<div className="flex flex-col gap-[var(--spacing-3)] md:flex-row md:items-center">
-						<div className="flex flex-1 items-center gap-[var(--spacing-2)] rounded-full border border-border/60 bg-card/95 px-[var(--spacing-4)] shadow-[var(--shadow-pressed)]">
-							<Search
-								className="h-4 w-4 text-muted-foreground"
-								aria-hidden="true"
-							/>
-							<Input
-								id={searchInputId}
-								placeholder="Search by name, description, tags..."
-								value={searchQuery}
-								onChange={(e) => onSearchChange(e.target.value)}
-								className="h-[var(--control-height-md)] border-none bg-transparent px-0 shadow-none focus-visible:ring-0"
-								aria-label="Search servers"
-							/>
-						</div>
-						<div className="flex w-full flex-col gap-[var(--spacing-3)] md:w-auto md:flex-row">
-							<Select value={status} onValueChange={onStatusChange}>
-								<SelectTrigger className="w-full md:min-w-[10rem]">
-									<SelectValue placeholder="Status" />
-								</SelectTrigger>
+	  return (
+
+	    <>
+
+	      <Card className="border border-border/60 bg-card shadow-sm px-[var(--spacing-4)] py-[var(--spacing-4)]">
+
+	        <div className="flex flex-col gap-[var(--spacing-3)]">
+
+	          <label
+
+	            htmlFor={searchInputId}
+
+	            className="text-label flex items-center gap-[var(--spacing-2)] text-muted-foreground"
+
+	          >
+
+	            <span className="hidden sm:inline">Search</span>
+
+	            <span className="sr-only">Search servers</span>
+
+	          </label>
+
+	          <div className="flex flex-col gap-[var(--spacing-3)] md:flex-row md:items-center">
+
+	            <div className="flex flex-1 items-center gap-[var(--spacing-2)] rounded-full border border-border bg-background px-[var(--spacing-4)] transition-colors focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20">
+
+	              <Search className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+
+	              <Input
+
+	                id={searchInputId}
+
+	                placeholder="Search by name, description, tags..."
+
+	                value={searchQuery}
+
+	                onChange={(e) => onSearchChange(e.target.value)}
+
+	                className="h-[var(--control-height-md)] border-none bg-transparent px-0 shadow-none focus-visible:ring-0"
+
+	                aria-label="Search servers"
+
+	              />
+
+	            </div>
+
+	            <div className="flex w-full flex-col gap-[var(--spacing-3)] md:w-auto md:flex-row">
+
+	              <Select value={status} onValueChange={onStatusChange}>
+
+	                <SelectTrigger className="w-full shadow-none md:min-w-[10rem]">
+
+	                  <SelectValue placeholder="Status" />
+
+	                </SelectTrigger>
 								<SelectContent>
 									<SelectItem value="all">All status</SelectItem>
 									<SelectItem value="online">Online</SelectItem>
