@@ -1,3 +1,9 @@
+import type { KeyboardEvent } from "react";
+
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+
 interface ServerCardProps {
   name: string;
   description: string;
@@ -6,7 +12,7 @@ interface ServerCardProps {
   owner: string;
   online: boolean;
   dns: string;
-  serverUrl: string;
+  serverUrl?: string;
 }
 
 export function ServerCard({
@@ -16,65 +22,95 @@ export function ServerCard({
   thumbnail,
   owner,
   online,
+  dns,
   serverUrl,
 }: ServerCardProps) {
   const defaultThumbnail =
     "https://cdn.jsdelivr.net/gh/gosuda/portal@main/portal.jpg";
+  const initials = owner
+    ? owner
+        .split(" ")
+        .map((part) => part[0])
+        .join("")
+        .slice(0, 2)
+        .toUpperCase()
+    : name.slice(0, 2).toUpperCase();
 
-  const goServer = () => {
-    window.location.href = serverUrl;
+  const handleNavigate = () => {
+    if (serverUrl) {
+      window.location.href = serverUrl;
+    }
   };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleNavigate();
+    }
+  };
+
   return (
-    <button
-      type="button"
-      onClick={goServer}
-      bg-card-dark
-      className="bg-center bg-no-repeat bg-cover rounded-xl shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
-      style={{ backgroundImage: `url(${thumbnail || defaultThumbnail})` }}
+    <Card
+      role="link"
+      tabIndex={0}
+      aria-label={`Open ${name}`}
+      onClick={handleNavigate}
+      onKeyDown={handleKeyDown}
+      className="group flex h-full cursor-pointer flex-col gap-4 border border-border/50 bg-card/90 p-4 transition-all hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
-      <div className="h-full w-full bg-black/70 rounded-xl z-1 flex flex-col gap-4 p-4 items-start text-start">
-        <div className="flex flex-1 flex-col justify-between gap-4">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-              <div
-                className={`w-2.5 h-2.5 rounded-full ${
-                  online ? "bg-green-status" : "bg-red-500"
-                }`}
-              />
-              <p
-                className={`text-sm font-medium leading-normal ${
-                  online ? "text-green-status" : "text-red-500"
-                }`}
-              >
-                {online ? "Online" : "Offline"}
-              </p>
-            </div>
-            <p className="text-white text-lg font-bold leading-tight">{name}</p>
+      <div className="relative h-32 w-full overflow-hidden rounded-[var(--radius-lg)] border border-border/40">
+        <img
+          src={thumbnail || defaultThumbnail}
+          alt={`Preview for ${name}`}
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+      </div>
+      <div className="flex flex-col gap-3">
+        <div className="flex items-center gap-2">
+          <Badge variant={online ? "success" : "destructive"}>
+            {online ? "Online" : "Offline"}
+          </Badge>
+          {dns && (
+            <Badge variant="outline" className="text-xs lowercase">
+              {dns}
+            </Badge>
+          )}
+        </div>
+        <div className="flex items-start justify-between gap-4">
+          <div className="space-y-2">
+            <h3 className="text-lg font-semibold tracking-tight text-foreground">
+              {name}
+            </h3>
             {description && (
-              <p className="text-text-muted text-sm font-normal leading-normal line-clamp-2">
+              <p className="text-sm text-muted-foreground line-clamp-2">
                 {description}
-              </p>
-            )}
-            {tags && tags.length > 0 && (
-              <div className="flex flex-wrap gap-1.5 mt-1">
-                {tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 bg-border-dark text-primary text-xs font-medium rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-            {owner && (
-              <p className="text-text-muted text-xs font-normal leading-normal">
-                by {owner}
               </p>
             )}
           </div>
         </div>
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Badge key={tag} variant="soft" className="text-[11px]">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+        {owner && (
+          <div className="flex items-center gap-3 pt-2">
+            <Avatar className="h-9 w-9">
+              <AvatarFallback>{initials}</AvatarFallback>
+            </Avatar>
+            <div className="text-sm text-muted-foreground">
+              <p className="font-medium text-foreground">{owner}</p>
+              <p>Owner</p>
+            </div>
+          </div>
+        )}
       </div>
-    </button>
+    </Card>
   );
 }

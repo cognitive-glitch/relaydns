@@ -127,53 +127,53 @@ function App() {
   };
 
   return (
-    <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-      <div className="layout-container flex h-full grow flex-col">
-        <div className="flex flex-1 justify-center py-5">
-          <div className="layout-content-container flex flex-col w-full max-w-6xl flex-1 px-4 md:px-8">
-            <Header />
-            <main className="flex-1 mt-6">
-              <SearchBar
-                searchQuery={searchQuery}
-                onSearchChange={handleSearchChange}
-                status={status}
-                onStatusChange={handleStatusChange}
-                sortBy={sortBy}
-                onSortByChange={handleSortByChange}
-              />
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 p-4 sm:p-6 mt-4">
-                {paginatedServers.length > 0 ? (
-                  paginatedServers.map((server) => (
-                    <ServerCard
-                      key={server.id}
-                      name={server.name}
-                      description={server.description}
-                      tags={server.tags}
-                      thumbnail={server.thumbnail}
-                      owner={server.owner}
-                      online={server.online}
-                      dns={server.dns}
-                      serverUrl={server.link}
-                    />
-                  ))
-                ) : (
-                  <div className="col-span-full text-center py-12">
-                    <p className="text-text-muted text-lg">
-                      No servers found matching your criteria
-                    </p>
-                  </div>
-                )}
-              </div>
-              {totalPages > 0 && (
-                <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  onPageChange={setCurrentPage}
-                />
+    <div className="min-h-screen bg-[hsl(var(--background))] text-foreground">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-[var(--spacing-4)] px-4 py-[var(--spacing-5)] sm:px-6 lg:px-8">
+        <Header />
+        <main className="flex flex-1 flex-col gap-[var(--spacing-4)]">
+          <SearchBar
+            searchQuery={searchQuery}
+            onSearchChange={handleSearchChange}
+            status={status}
+            onStatusChange={handleStatusChange}
+            sortBy={sortBy}
+            onSortByChange={handleSortByChange}
+          />
+
+          <section className="rounded-[var(--radius-xl)] border border-border/50 bg-card/30 p-4 shadow-[var(--shadow-raised)]">
+            <div className="grid grid-cols-1 gap-[var(--spacing-4)] md:grid-cols-2 xl:grid-cols-3">
+              {paginatedServers.length > 0 ? (
+                paginatedServers.map((server) => (
+                  <ServerCard
+                    key={server.id}
+                    name={server.name}
+                    description={server.description}
+                    tags={server.tags}
+                    thumbnail={server.thumbnail}
+                    owner={server.owner}
+                    online={server.online}
+                    dns={server.dns}
+                    serverUrl={server.link}
+                  />
+                ))
+              ) : (
+                <div className="col-span-full rounded-[var(--radius-lg)] border border-dashed border-border/60 p-8 text-center">
+                  <p className="text-base text-muted-foreground">
+                    No servers found matching your criteria.
+                  </p>
+                </div>
               )}
-            </main>
-          </div>
-        </div>
+            </div>
+          </section>
+
+          {totalPages > 0 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
+          )}
+        </main>
       </div>
     </div>
   );
