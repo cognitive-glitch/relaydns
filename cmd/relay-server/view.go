@@ -289,7 +289,7 @@ func convertLeaseEntriesToRows(serv *portal.RelayServer) []leaseRow {
 			Metadata:    lease.Metadata,
 		}
 
-		if row.Hide != true {
+		if !row.Hide {
 			rows = append(rows, row)
 		}
 	}
